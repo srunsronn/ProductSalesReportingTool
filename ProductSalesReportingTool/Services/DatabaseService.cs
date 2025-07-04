@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -22,12 +23,8 @@ namespace ProductSalesReportingTool.Services
                 {
                     conn.Open();
 
-                    //query to fetch sales data based on date range
-                    string query = "SELECT PRODUCTCODE, PRODUCTNAME, QUANTITY, UNITPRICE, SALEDATE " +
-                                    "FROM PRODUCTSALES " +
-                                    "WHERE SALEDATE BETWEEN @StartDate AND @EndDate";
-
-                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlCommand cmd = new SqlCommand("sp_GetProductSales", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     //input parameters 
                     cmd.Parameters.AddWithValue("@StartDate", startDate);
@@ -50,8 +47,9 @@ namespace ProductSalesReportingTool.Services
 
             }catch(Exception ex)
             {
-                System.IO.File.AppendAllText("logs/errors.txt", ex.Message + Environment.NewLine);
-
+                System.IO.Directory.CreateDirectory("logs");
+                System.IO.File.AppendAllText("logs/errors.txt",
+                   $"Database error: {ex.Message}\r\n{ex.StackTrace}\r\n{DateTime.Now}\r\n\r\n");
             }
             return sales;
 
