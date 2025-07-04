@@ -1,8 +1,8 @@
 ﻿using DevExpress.XtraReports.UI;
-using ProductSalesReportingTool.Models; // Add this import
+using ProductSalesReportingTool.Models; 
 using System;
 using System.Collections;
-using System.Collections.Generic; // Add this import
+using System.Collections.Generic; 
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
@@ -17,7 +17,6 @@ namespace ProductSalesReportingTool.AnalystReport
         {
             InitializeComponent();
 
-            // Find or create a report header if it doesn't exist
             ReportHeaderBand reportHeader = FindBand(typeof(ReportHeaderBand)) as ReportHeaderBand;
             if (reportHeader == null)
             {
@@ -26,7 +25,7 @@ namespace ProductSalesReportingTool.AnalystReport
                 reportHeader.HeightF = 100;
             }
 
-            // Add title label if needed
+            // title label 
             if (reportHeader.Controls.Count == 0)
             {
                 XRLabel titleLabel = new XRLabel();
@@ -58,20 +57,16 @@ namespace ProductSalesReportingTool.AnalystReport
                 this.DataSource = sales;
                 this.DataMember = "";
 
-                // Set the date range text with updated format dd/MM/yyyy
                 if (lblDateRange != null)
                 {
                     lblDateRange.Text = $"Date Range: {startDate:yyyy-MM-dd} to {endDate:yyyy-MM-dd}";
                 }
                 if (GroupHeader1 != null)
                 {
-                    // Clear any existing group fields
                     GroupHeader1.GroupFields.Clear();
 
-                    // Add ProductCode as the group field
                     GroupHeader1.GroupFields.Add(new GroupField("ProductCode"));
                 }
-                // Find the date column in the detail band and update its format
                 foreach (var control in Detail.Controls)
                 {
                     if (control is XRTableCell cell && cell.ExpressionBindings.Any(e => e.PropertyName == "Text" && e.Expression.Contains("SaleDate")))

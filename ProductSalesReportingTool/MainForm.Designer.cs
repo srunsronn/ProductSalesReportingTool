@@ -34,14 +34,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnGenerateReport = new System.Windows.Forms.Button();
             this.headText = new System.Windows.Forms.Label();
+            this.btnExportPdf = new System.Windows.Forms.Button();
+            this.txtProductFilter = new System.Windows.Forms.TextBox();
+            this.lblProductFilter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dtpStart
             // 
             this.dtpStart.CalendarTrailingForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dtpStart.CustomFormat = "yyyy-MM-dd";
             this.dtpStart.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStart.CustomFormat = "yyyy-MM-dd";
             this.dtpStart.Location = new System.Drawing.Point(369, 108);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(221, 25);
@@ -63,9 +66,9 @@
             // 
             // dtpEnd
             // 
+            this.dtpEnd.CustomFormat = "yyyy-MM-dd";
             this.dtpEnd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEnd.CustomFormat = "yyyy-MM-dd";
             this.dtpEnd.Location = new System.Drawing.Point(369, 160);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(221, 25);
@@ -92,7 +95,7 @@
             this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateReport.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateReport.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateReport.Location = new System.Drawing.Point(301, 227);
+            this.btnGenerateReport.Location = new System.Drawing.Point(309, 258);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(246, 44);
             this.btnGenerateReport.TabIndex = 4;
@@ -112,12 +115,48 @@
             this.headText.Text = "Here is the Sales Report Tool";
             this.headText.Click += new System.EventHandler(this.headText_Click);
             // 
+            // btnExportPdf
+            // 
+            this.btnExportPdf.BackColor = System.Drawing.Color.LightCoral;
+            this.btnExportPdf.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportPdf.ForeColor = System.Drawing.Color.White;
+            this.btnExportPdf.Location = new System.Drawing.Point(309, 319);
+            this.btnExportPdf.Name = "btnExportPdf";
+            this.btnExportPdf.Size = new System.Drawing.Size(246, 44);
+            this.btnExportPdf.TabIndex = 6;
+            this.btnExportPdf.Text = "Export PDF ";
+            this.btnExportPdf.UseVisualStyleBackColor = false;
+            this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
+            // 
+            // txtProductFilter
+            // 
+            this.txtProductFilter.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductFilter.Location = new System.Drawing.Point(369, 207);
+            this.txtProductFilter.Name = "txtProductFilter";
+            this.txtProductFilter.Size = new System.Drawing.Size(221, 25);
+            this.txtProductFilter.TabIndex = 6;
+            // 
+            // lblProductFilter
+            // 
+            this.lblProductFilter.AutoSize = true;
+            this.lblProductFilter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductFilter.ForeColor = System.Drawing.Color.Transparent;
+            this.lblProductFilter.Location = new System.Drawing.Point(239, 207);
+            this.lblProductFilter.Name = "lblProductFilter";
+            this.lblProductFilter.Size = new System.Drawing.Size(127, 23);
+            this.lblProductFilter.TabIndex = 7;
+            this.lblProductFilter.Text = "Product Filter";
+            this.lblProductFilter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblProductFilter);
+            this.Controls.Add(this.txtProductFilter);
+            this.Controls.Add(this.btnExportPdf);
             this.Controls.Add(this.headText);
             this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.label2);
@@ -141,6 +180,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGenerateReport;
         private System.Windows.Forms.Label headText;
+        private System.Windows.Forms.Button btnExportPdf;
+        private System.Windows.Forms.TextBox txtProductFilter;
+        private System.Windows.Forms.Label lblProductFilter;
     }
 }
 

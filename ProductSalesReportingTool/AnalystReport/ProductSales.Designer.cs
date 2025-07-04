@@ -134,7 +134,7 @@
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.StylePriority.UseBorders = false;
             this.xrTableCell6.Text = "xrTableCell6";
-            this.xrTableCell6.TextFormatString = "{0:yyyy/MM/dd}";
+            this.xrTableCell6.TextFormatString = "{0:yyyy-MM-dd}";
             this.xrTableCell6.Weight = 1.2889999389648437D;
             // 
             // xrTableCell7
@@ -162,7 +162,7 @@
             this.xrTableCell9.Multiline = true;
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.Text = "xrTableCell9";
-            this.xrTableCell9.TextFormatString = "${0}";
+            this.xrTableCell9.TextFormatString = "${0:0.00}";
             this.xrTableCell9.Weight = 1.2890013195275611D;
             // 
             // xrTableCell10
@@ -172,7 +172,7 @@
             this.xrTableCell10.Multiline = true;
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.Text = "xrTableCell10";
-            this.xrTableCell10.TextFormatString = "${0}";
+            this.xrTableCell10.TextFormatString = "${0:0.00}";
             this.xrTableCell10.Weight = 1.2890013195275611D;
             // 
             // ReportHeader
