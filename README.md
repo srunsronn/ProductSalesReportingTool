@@ -89,3 +89,9 @@ ADO.NET
 SQL Server
 
 Unicode font rendering support
+
+## 📸 Example Output
+👉 Location: /ProductSalesReportingTool/screenshoot/
+
+## 👉 Script For Create and Seed Data generate from Sql Server
+👉 Location: /ProductSalesReportingTool/ProductSalesScript.sql
