@@ -23,8 +23,8 @@ namespace ProductSalesReportingTool.Services
                     conn.Open();
 
                     //query to fetch sales data based on date range
-                    string query = "SELECT PRODUCTCODE, PRODUCTNAME, QUANTITY, UNITPRICE, SALEDATE" +
-                                    "FROM PRODUCTSALES" +
+                    string query = "SELECT PRODUCTCODE, PRODUCTNAME, QUANTITY, UNITPRICE, SALEDATE " +
+                                    "FROM PRODUCTSALES " +
                                     "WHERE SALEDATE BETWEEN @StartDate AND @EndDate";
 
                     SqlCommand cmd = new SqlCommand(query, conn);

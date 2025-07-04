@@ -40,7 +40,8 @@
             // 
             this.dtpStart.CalendarTrailingForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dtpStart.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpStart.CustomFormat = "yyyy-MM-dd";
             this.dtpStart.Location = new System.Drawing.Point(369, 108);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(221, 25);
@@ -50,11 +51,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(239, 105);
+            this.label1.Location = new System.Drawing.Point(239, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 28);
+            this.label1.Size = new System.Drawing.Size(99, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Start Date";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -63,7 +64,8 @@
             // dtpEnd
             // 
             this.dtpEnd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEnd.CustomFormat = "yyyy-MM-dd";
             this.dtpEnd.Location = new System.Drawing.Point(369, 160);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(221, 25);
@@ -74,11 +76,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(239, 157);
+            this.label2.Location = new System.Drawing.Point(239, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 28);
+            this.label2.Size = new System.Drawing.Size(89, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "End Date";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,13 +103,14 @@
             // headText
             // 
             this.headText.AutoSize = true;
-            this.headText.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headText.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headText.ForeColor = System.Drawing.SystemColors.MenuText;
             this.headText.Location = new System.Drawing.Point(257, 38);
             this.headText.Name = "headText";
-            this.headText.Size = new System.Drawing.Size(320, 31);
+            this.headText.Size = new System.Drawing.Size(356, 32);
             this.headText.TabIndex = 5;
             this.headText.Text = "Here is the Sales Report Tool";
+            this.headText.Click += new System.EventHandler(this.headText_Click);
             // 
             // MainForm
             // 
